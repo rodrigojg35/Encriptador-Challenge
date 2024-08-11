@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * Tener en cuenta que 1 rem son 16 pixeles.
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    gap: 2rem;
+}
+
+.seccion-izquierda {
+    flex: 0 0 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.seccion-derecha {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.img-logo {
+    width: 3.5rem;
+    height: 5.5rem;
+    padding-top: 2rem;
+}
+
+.seccion{
+    padding-left: 15%;
+}
+
+.input{
+    /* background-color: inherit;*/
+    background-color: inherit;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem; 
+    color: #0A3871;
+
+    margin-top: 5.5rem;  
+
+    
+    width: 38rem; 
+    height: 12rem; 
+ 
+}
+
+.input::placeholder {
+    color: inherit; 
+}
+
+.seccion-exclamacion{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;  /* 168px */
+    gap: 0.5rem;
+}
+
+.img-exclamacion {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain; 
+}
+
+.parrafo-exclamacion{
+    color: #495057;
+    font-size: 0.75rem;
+}
+
+.seccion-botones{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;  /* 168px */
+    gap: 1rem;
+}
+
+.boton {
+    max-width: 19.5rem;
+    max-height: 3.18rem;
+    object-fit: contain; 
+    image-rendering: auto;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 10%;
+}
+
+.boton:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* tamaño */
+    
+}
+
+
+
+.rectangulo {
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 1.2rem;
+    
+    height: 29.3rem;
+    text-align: center;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: left; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 1.25rem;
+    
+    
+    width: 18rem;
+    justify-content: space-between;
+    
+    
+}
+
+.boton-copiar{
+    width: 100%;
+}
+
+.boton-copiar-expandido{
+    width: 100%;
+    height: auto;
+
+    object-fit: contain; 
+    image-rendering: auto;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 4%;
+}
+
+.boton-copiar-expandido:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* tamaño */
+    
+}
+
+.boton-visible{
+    display: none !important;
+}
+
+.mensaje-traduccion{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem; 
+    color: #495057;
+    text-align: left;
+    max-height: 22rem; 
+    overflow-y: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.img-muñeco{
+    width: 90%;
+    height: auto;
+}
+
+
+.mensajes{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.mensaje-titulo{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem; 
+    color: #343A40;
+    font-weight: bold;
+}
+
+.mensaje-subtitulo{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; 
+    color: #495057;
+}
+
+#mensaje-emergente {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#mensaje-emergente.visible {
+    opacity: 1;
+}
+
+#mensaje-emergente.oculto {
+    opacity: 0;
+}
+
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+
+    
+    .contenedor {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .seccion-izquierda, .seccion-derecha {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-logo{
+        margin-right: 30rem;
+    }
+
+    .seccion-botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .rectangulo {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    
+    .img-muñeco {
+        display: none !important;
+    }
+
+    .boton-copiar{
+        display: none !important;
+    }
+
+    .boton-visible{
+        display: block !important;
+    }
+
+    .boton-oculto{
+        display: none !important;
+    }
+}
+
+/* Media queries para teléfonos */
+@media (max-width: 425px) {
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Asegura que el contenedor principal esté centrado */
+        gap: 3rem;
+        width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+        padding: 0 1rem; /* Añade un padding para evitar que el contenido toque los bordes */
+    }
+
+    .seccion-izquierda, .seccion-derecha {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Aseguramos que los elementos dentro de las secciones estén en columna */
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* Asegura que el texto dentro de las secciones esté centrado */
+    }
+
+    .seccion {
+        padding-left: 0%;
+        width: 100%; /* Asegura que la sección ocupe el 100% del ancho */
+    }
+
+    .img-logo {
+        margin-right: 0px;
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    }
+
+    .rectangulo {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .boton {
+        width: 100% !important; /* Asegúrate de que el botón ocupe el 100% del ancho disponible */
+        max-width: 100% !important; /* Asegúrate de que no haya un límite máximo que impida el crecimiento */
+        padding: 1rem; /* Ajusta el padding para hacer el botón más grande */
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para hacer el texto más grande */
+    }
+
+    .img-muñeco {
+        display: none !important;
+    }
+}

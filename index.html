@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Encriptador-Challenge</title>
+</head>
+<body>
+
+    <div id="mensaje-emergente" class="oculto">Copiado al portapapeles</div>
+    <div class="contenedor">
+
+        <div class="seccion-izquierda">
+
+            <img src="assets/logo.png" alt="Imagen-Logo" class="img-logo">
+
+            <div class="seccion">
+                <textarea class="input" id="input" placeholder="Inserte el texto aqui"></textarea>
+
+                <div class="seccion-exclamacion">
+                    <img src="assets/exclamacion.png" alt="signo-exclamacion" class="img-exclamacion">
+                    <p class="parrafo-exclamacion">Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="seccion-botones">
+                    <img src="assets/boton-encriptar.png" alt="boton-encriptar" class="boton boton-encriptar" id="boton-encriptar">
+                    <img src="assets/boton-desencriptar.png" alt="boton-desencriptar" class="boton boton-desencriptar" id="boton-desencriptar">
+                </div>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="seccion-derecha">
+            
+            <div class="rectangulo" id="rectangulo">
+                
+                <img src="assets/muñeco.png" alt="img-muñeco" class="seccion-default img-muñeco ">
+
+                <div class="seccion-default mensajes">
+                    <p class="mensaje-titulo">Ningún mensaje fue encontrado.</p>
+                    <p class="mensaje-subtitulo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+                
+                <p class="seccion-traduccion mensaje-traduccion" id="mensaje-traduccion"></p>
+
+                <img src="assets/boton-copiar.png" alt="boton-copiar" class="seccion-traduccion boton boton-copiar" id="boton-copiar">
+                <img src="assets/boton-copiar-expandido.png" alt="boton-copiar-expandido" class="seccion-traduccion boton-copiar-expandido" id="boton-copiar-expandido">
+
+
+                
+               
+                
+
+            </div>
+        </div>
+        <br>
+    </div>
+    
+    
+
+
+
+
+        
+    
+    
+    <script src="js/funciones.js"></script>
+</body>
+</html>
