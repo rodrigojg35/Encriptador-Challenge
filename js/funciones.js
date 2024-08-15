@@ -134,8 +134,12 @@ function cambiarASeccionTraduccion() {
 
     rectangulo.style.justifyContent = 'space-between';
 
+    botonCopiar.classList.add('regresar-boton');
+
     botonCopiarExpandido.classList.add('boton-visible');
     botonCopiarExpandido.classList.remove('boton-oculto');
+
+    
     
 }
 
