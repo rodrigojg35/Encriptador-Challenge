@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    /*width: 100vh; */
 
 }
 
@@ -227,10 +228,18 @@ body {
 /* Media queries para tabletas */
 @media (max-width: 768px) {
 
+    body{
+        width: 100%;
+    }
+
+    .seccion{
+        padding-left: 8px;
+    }
     
     .contenedor {
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
     }
 
     .seccion-izquierda, .seccion-derecha {
@@ -247,8 +256,10 @@ body {
 
     .seccion-botones{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
 
@@ -275,10 +286,21 @@ body {
     .boton-oculto{
         display: none !important;
     }
+
+    .boton{
+        max-height: none;
+        max-width: none;
+        width: 50%;
+    }
 }
 
 /* Media queries para teléfonos */
 @media (max-width: 425px) {
+
+    .input {
+        width: 100%;
+        height: 10rem;
+    }
 
     .contenedor {
         flex-direction: column;
@@ -305,6 +327,7 @@ body {
     }
 
     .img-logo {
+        margin-top: 2rem;
         margin-right: 0px;
         max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
     }
@@ -319,11 +342,18 @@ body {
     .boton {
         width: 100% !important; /* Asegúrate de que el botón ocupe el 100% del ancho disponible */
         max-width: 100% !important; /* Asegúrate de que no haya un límite máximo que impida el crecimiento */
-        padding: 1rem; /* Ajusta el padding para hacer el botón más grande */
+        
         font-size: 1.2rem; /* Ajusta el tamaño de la fuente para hacer el texto más grande */
+        height: 4rem;
+        
     }
 
     .img-muñeco {
         display: none !important;
     }
+    body{
+        padding: 0;
+    }
+
+
 }
