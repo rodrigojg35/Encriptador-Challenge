@@ -320,7 +320,7 @@ body {
         width: 100%; 
         padding: 0 2rem; 
         height: 100vh;
-        gap: 0;
+        gap: 2rem;
     }
 
     .seccion-izquierda, .seccion-derecha {
